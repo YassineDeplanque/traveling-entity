@@ -1,14 +1,14 @@
 import gsap from "gsap";
 
-const head = document.getElementById("head") as HTMLCanvasElement;
-head.width = window.innerWidth;
-head.height = window.innerHeight;
+const canvas = document.getElementById("myCanvas") as HTMLCanvasElement;
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
 
-const ctx = head.getContext("2d");
+const ctx = canvas.getContext("2d");
 if (!ctx) throw new Error("CTX is NULL");
 
-let targetX = head.width / 2;
-let targetY = head.height / 2;
+let targetX = canvas.width / 2;
+let targetY = canvas.height / 2;
 
 const beast = {
   x: targetX,
@@ -29,7 +29,7 @@ window.addEventListener("mousemove", (e: MouseEvent) => {
 
 function animate() {
   if (!ctx) throw new Error("CTX is NULL");
-  ctx.clearRect(0, 0, head.width, head.height);
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
 
   ctx.beginPath();
   ctx.arc(beast.x, beast.y, 20, 0, Math.PI * 2);
