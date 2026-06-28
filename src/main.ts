@@ -1,6 +1,6 @@
 import gsap from "gsap";
 
-const canvas = document.getElementById("myCanvas") as HTMLCanvasElement;
+const canvas = document.getElementById("head") as HTMLCanvasElement;
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 
@@ -32,7 +32,7 @@ function animate() {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
 
   ctx.beginPath();
-  ctx.arc(beast.x, beast.y, 40, 0, Math.PI * 2);
+  ctx.arc(beast.x, beast.y, 20, 0, Math.PI * 2);
   ctx.stroke();
 
   requestAnimationFrame(animate);
