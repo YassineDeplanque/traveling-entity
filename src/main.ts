@@ -22,7 +22,7 @@ window.addEventListener("mousemove", (e: MouseEvent) => {
   gsap.to(beast, {
     x: targetX,
     y: targetY,
-    duration: 15,
+    duration: 10,
     ease: "power2.out",
   });
 });
